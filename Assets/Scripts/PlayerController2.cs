@@ -10,6 +10,7 @@ public class PlayerController2 : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
+    private float yBound = -10;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,11 @@ public class PlayerController2 : MonoBehaviour
         {
             player2Rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
+        }
+
+        if(transform.position.y < yBound)
+        {
+            Destroy(gameObject);
         }
     }
 
