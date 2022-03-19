@@ -11,6 +11,7 @@ public class PlayerController2 : MonoBehaviour
     public bool isOnGround = true;
     private Rigidbody2D player2Rb2d;
     private float yBound = -5;
+    private float xRange = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,11 @@ public class PlayerController2 : MonoBehaviour
         }
 
         if(transform.position.y < yBound)
+        {
+            Destroy(gameObject);
+        }
+
+        if (transform.position.x < (-xRange, xRange))
         {
             Destroy(gameObject);
         }
