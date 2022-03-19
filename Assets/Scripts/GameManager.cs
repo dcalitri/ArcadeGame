@@ -22,4 +22,14 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void StartGame()
+    {
+        titleScreen.gameObject.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
