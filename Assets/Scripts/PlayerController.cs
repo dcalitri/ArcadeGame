@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // How to Quit back to the Arcade Machine main menu
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             Application.Quit();

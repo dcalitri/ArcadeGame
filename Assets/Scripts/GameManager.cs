@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
+    // Hides the mouse cursor upon hitting the start button
     {
      Cursor.visible = false;
     }
