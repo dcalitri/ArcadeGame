@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject titleScreen;
+    public Button restartButton;
     private Button button;
 
 
@@ -29,6 +30,13 @@ public class GameManager : MonoBehaviour
         titleScreen.gameObject.SetActive(false);
     }
 
+
+    public void GameOver()
+    {
+        restartButton.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(true);
+        isGameActive = false;
+    }
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
