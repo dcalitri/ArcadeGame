@@ -21,7 +21,19 @@ public class PlayerController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        if(Input.GetKey(KeyCode.RightArrow))
+        {
+            horizontalInput = 1;
+        }
+        else if(Input.GetKey(KeyCode.LeftArrow))
+        {
+            horizontalInput = -1;
+        }
+        else
+        {
+            horizontalInput = 0;
+        }
+
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
