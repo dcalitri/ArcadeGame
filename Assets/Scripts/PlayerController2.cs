@@ -49,7 +49,11 @@ public class PlayerController2 : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (transform.position.x < (-xRange, xRange))
+        if (transform.position.x > xRange)
+        {
+            Destroy(gameObject);
+        }
+        else if (transform.position.x < -xRange)
         {
             Destroy(gameObject);
         }
