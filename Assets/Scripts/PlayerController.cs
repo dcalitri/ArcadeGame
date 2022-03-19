@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     private Rigidbody2D playerRb2d;
     private float yBound = -5;
-    private float xRange = 10;
+    private float xRange = 7;
     // Start is called before the first frame update
     void Start()
     {
