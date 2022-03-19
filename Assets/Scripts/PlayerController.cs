@@ -56,6 +56,11 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision2D)
