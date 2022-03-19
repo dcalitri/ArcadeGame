@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Power-up
+  - Power-up2
+  - Powerup
+  - Powerup2
   layers:
   - Default
   - TransparentFX
