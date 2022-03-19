@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Power-up
-  - Power-up2
   - Powerup
   - Powerup2
+  - Player1
+  - Player2
+  - Ground
   layers:
   - Default
   - TransparentFX
