@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject titleScreen;
-    public bool isGameActive = false;
+    private Button button;
+
+
     // Start is called before the first frame update
     void Start()
-    // Hides the mouse cursor upon hitting the start button
+
     {
-     Cursor.visible = false;
+     
     }
 
     // Update is called once per frame
@@ -23,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        isGameActive = true;
         titleScreen.gameObject.SetActive(false);
     }
 
