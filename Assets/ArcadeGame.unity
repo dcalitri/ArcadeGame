@@ -337,7 +337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &230670487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 988359799}
   - component: {fileID: 988359801}
   m_Layer: 0
-  m_Name: Jump Power-up
+  m_Name: Jump Powerup
   m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1073,7 +1073,7 @@ GameObject:
   - component: {fileID: 1114279720}
   - component: {fileID: 1114279722}
   m_Layer: 0
-  m_Name: Strength Power-up
+  m_Name: Strength Powerup
   m_TagString: Powerup2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1511,7 +1511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1473513003
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1895,7 +1895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1684128471
 Transform:
   m_ObjectHideFlags: 0
