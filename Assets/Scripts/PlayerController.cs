@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
-    private float yBound = -10;
+    private float yBound = -5;
 
     // Start is called before the first frame update
     void Start()
