@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1434027375690542594, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1434027375690542595, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -259,6 +263,10 @@ PrefabInstance:
     - target: {fileID: 3358106626237466881, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358106626237466882, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3358106626237466883, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
       propertyPath: m_RootOrder

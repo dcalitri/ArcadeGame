@@ -6,10 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     public float speed = 10.0f;
-    private Rigidbody2D playerRb2d;
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
+    private Rigidbody2D playerRb2d;
     private float yBound = -5;
 
     // Start is called before the first frame update
