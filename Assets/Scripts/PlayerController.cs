@@ -84,6 +84,13 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
         }
+
+        if (other.CompareTag("Powerup2"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+            StartCoroutine(PowerupCountdownRoutine());
+        }
     }
 
 IEnumerator PowerupCountdownRoutine()
