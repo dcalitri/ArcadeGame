@@ -190,32 +190,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3131751511911716009, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3131751511911716009, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
+      propertyPath: powerupStrength
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
---- !u!1 &32297793 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3358106626237466941, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
-  m_PrefabInstance: {fileID: 175408610}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &32297794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32297793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9961d5e218a000b4f81ecf86002981a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalInput: 0
-  speed: 7
-  jumpForce: 7
-  gravityModifier: 0
-  powerupStrength: 15
-  isOnGround: 1
-  hasPowerup: 0
 --- !u!1 &74731049
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +313,14 @@ PrefabInstance:
     - target: {fileID: 3358106626237466941, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
       propertyPath: m_TagString
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490474515776698391, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490474515776698391, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
+      propertyPath: powerupStrength
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
@@ -2289,26 +2281,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015312831}
   m_CullTransparentMesh: 1
---- !u!1 &1434027375711254409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1434027375690542593, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
-  m_PrefabInstance: {fileID: 21764488}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1434027375711254410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434027375711254409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2565365f5c2c8634097bff646039a465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalInput: 0
-  speed: 7
-  jumpForce: 7
-  gravityModifier: 0
-  isOnGround: 1
-  hasPowerup: 0
