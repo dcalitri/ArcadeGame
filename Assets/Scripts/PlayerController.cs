@@ -68,9 +68,11 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         isOnGround = true;
+        if (collision2D.gameObject.CompareTag("Player2") && hasPowerup)
+            Debug.Log("Collided with " + collision2D.gameObject.name + " with powerup set to " + hasPowerup);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Powerup"))
         {
