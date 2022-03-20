@@ -34,25 +34,28 @@ public class PlayerController2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(gameManager.isGameActive)
         {
-            horizontalInput = 1;
-        }
-        else if(Input.GetKey(KeyCode.LeftArrow))
-        {
-            horizontalInput = -1;
-        }
-        else
-        {
-            horizontalInput = 0;
-        }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                horizontalInput = 1;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                horizontalInput = -1;
+            }
+            else
+            {
+                horizontalInput = 0;
+            }
 
-        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
+            transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
-        if (Input.GetKeyDown(KeyCode.Alpha4) && isOnGround)
-        {
-            player2Rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isOnGround = false;
+            if (Input.GetKeyDown(KeyCode.Alpha4) && isOnGround)
+            {
+                player2Rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                isOnGround = false;
+            }
         }
 
         if(transform.position.y < yBound)
