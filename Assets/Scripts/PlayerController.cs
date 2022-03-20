@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
         playerRb2d = GetComponent <Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        // How to Quit back to the Arcade Machine main menu
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     // Update is called once per frame
@@ -62,7 +67,6 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
             gameManager.GameOver();
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision2D)
@@ -82,7 +86,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator PowerupCountdownRoutine()
+IEnumerator PowerupCountdownRoutine()
     {
         yield return new WaitForSeconds(5);
         hasPowerup = false;

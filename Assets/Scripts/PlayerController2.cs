@@ -9,7 +9,6 @@ public class PlayerController2 : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
-    public bool hasPowerup = false;
     private Rigidbody2D player2Rb2d;
     private GameManager gameManager;
     private float yBound = -5;
@@ -21,6 +20,12 @@ public class PlayerController2 : MonoBehaviour
         player2Rb2d = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
+        // How to Quit back to the Arcade Machine main menu
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     // Update is called once per frame
@@ -68,21 +73,5 @@ public class PlayerController2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         isOnGround = true;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Powerup"))
-        {
-            hasPowerup = true;
-            Destroy(other.gameObject);
-            StartCoroutine(PowerupCountdownRoutine());
-        }
-    }
-
-    IEnumerator PowerupCountdownRoutine()
-    {
-        yield return new WaitForSeconds(5);
-        hasPowerup = false;
     }
 }

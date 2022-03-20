@@ -43,13 +43,4 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    void BackToMenu()
-    {
-        // How to Quit back to the Arcade Machine main menu
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-    }
 }
