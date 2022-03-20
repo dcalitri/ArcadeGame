@@ -9,6 +9,7 @@ public class PlayerController2 : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
+    public bool hasPowerup = false;
     private Rigidbody2D player2Rb2d;
     private GameManager gameManager;
     private float yBound = -5;
@@ -67,5 +68,21 @@ public class PlayerController2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         isOnGround = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+            StartCoroutine(PowerupCountdownRoutine());
+        }
+    }
+
+    IEnumerator PowerupCountdownRoutine()
+    {
+        yield return new WaitForSeconds(5);
+        hasPowerup = false;
     }
 }
