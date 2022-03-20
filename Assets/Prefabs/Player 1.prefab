@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4490474515776698391}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,5 +148,6 @@ MonoBehaviour:
   speed: 2
   jumpForce: 0.5
   gravityModifier: 0
+  powerupStrength: 15
   isOnGround: 1
   hasPowerup: 0

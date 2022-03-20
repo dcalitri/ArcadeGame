@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     public float jumpForce;
     public float gravityModifier;
+    public float powerupStrength = 15.0f;
     public bool isOnGround = true;
     public bool hasPowerup = false;
     private Rigidbody2D playerRb2d;
@@ -72,8 +73,15 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
         isOnGround = true;
+
         if (collision2D.gameObject.CompareTag("Player2") && hasPowerup)
+        {
+            Rigidbody2D player2RigidBody2D = collision2D.gameObject.GetComponent<Rigidbody2D>();
+            Vector3 awayFromPLayer = (collision2D.gameObject.transform.position - transform.position);
+
             Debug.Log("Collided with " + collision2D.gameObject.name + " with powerup set to " + hasPowerup);
+            player2RigidBody2D.AddForce(awayFromPlayer * powerupStrength, ForceMode2D.Impulse);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
