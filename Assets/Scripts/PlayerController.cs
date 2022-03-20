@@ -9,16 +9,18 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float gravityModifier;
     public float powerupStrength = 15.0f;
+    public float powerupSpeedBoost = 10.0f;
     public bool isOnGround = true;
     public bool hasPowerup = false;
-    private Rigidbody2D playerRb2d;
+    private Rigidbody2D player2Rb2d;
     private GameManager gameManager;
     private float yBound = -5;
     private float xRange = 9;
+
     // Start is called before the first frame update
     void Start()
     {
-        playerRb2d = GetComponent <Rigidbody2D>();
+        player2Rb2d = GetComponent <Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         // How to Quit back to the Arcade Machine main menu
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
-            playerRb2d.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
+            player2Rb2d.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
         }
 
@@ -80,6 +82,15 @@ public class PlayerController : MonoBehaviour
             Vector3 awayFromPlayer = (collision2D.gameObject.transform.position - transform.position);
 
             player2RigidBody2D.AddForce(awayFromPlayer * powerupStrength, ForceMode2D.Impulse);
+            Debug.Log("Collided with " + collision2D.gameObject.name + " with powerup set to " + hasPowerup);
+        }
+
+        if (collision2D.gameObject.CompareTag("Player2") && hasPowerup)
+        {
+            Rigidbody2D player2RigidBody2D = collision2D.gameObject.GetComponent<Rigidbody2D>();
+            Vector3 awayFromPlayer = (collision2D.gameObject.transform.position - transform.position);
+
+            player2RigidBody2D.AddForce(awayFromPlayer * powerupSpeedBoost, ForceMode2D.Impulse);
             Debug.Log("Collided with " + collision2D.gameObject.name + " with powerup set to " + hasPowerup);
         }
     }

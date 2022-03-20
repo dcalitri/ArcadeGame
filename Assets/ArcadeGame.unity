@@ -319,6 +319,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4490474515776698391, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
+      propertyPath: powerupJump
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490474515776698391, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
       propertyPath: powerupStrength
       value: 10
       objectReference: {fileID: 0}
