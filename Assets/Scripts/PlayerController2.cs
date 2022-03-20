@@ -10,6 +10,7 @@ public class PlayerController2 : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     private Rigidbody2D player2Rb2d;
+    private GameManager gameManager;
     private float yBound = -5;
     private float xRange = 9;
 
@@ -18,6 +19,7 @@ public class PlayerController2 : MonoBehaviour
     {
         player2Rb2d = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -47,15 +49,18 @@ public class PlayerController2 : MonoBehaviour
         if(transform.position.y < yBound)
         {
             Destroy(gameObject);
+            gameManager.GameOver();
         }
 
         if (transform.position.x > xRange)
         {
             Destroy(gameObject);
+            gameManager.GameOver();
         }
         else if (transform.position.x < -xRange)
         {
             Destroy(gameObject);
+            gameManager.GameOver();
         }
     }
 

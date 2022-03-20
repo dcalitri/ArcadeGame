@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     private Rigidbody2D playerRb2d;
+    private GameManager gameManager;
     private float yBound = -5;
     private float xRange = 9;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRb2d = GetComponent <Rigidbody2D>();
         Physics.gravity *= gravityModifier;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -46,21 +48,18 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < yBound)
         {
             Destroy(gameObject);
+            gameManager.GameOver();
         }
 
         if (transform.position.x > xRange)
         {
             Destroy(gameObject);
+            gameManager.GameOver();
         }
         else if (transform.position.x < -xRange)
         {
             Destroy(gameObject);
-        }
-
-        // How to Quit back to the Arcade Machine main menu
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            Application.Quit();
+            gameManager.GameOver();
         }
 
     }
