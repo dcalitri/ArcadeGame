@@ -24,7 +24,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Detect when the Return key is pressed down
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Return key was pressed.");
+        }
 
+        //Detect when the Return key has been released
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            Debug.Log("Return key was released.");
+        }
     }
 
     public void StartGame()
@@ -35,13 +45,13 @@ public class GameManager : MonoBehaviour
         spawnManager.SpawnPowerUp2();
     }
 
-
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         isGameActive = false;
     }
+
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
