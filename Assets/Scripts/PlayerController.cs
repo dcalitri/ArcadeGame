@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
         player2Rb2d = GetComponent <Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        
         // How to Quit back to the Arcade Machine main menu
         if (Input.GetKeyUp(KeyCode.Escape))
         {
