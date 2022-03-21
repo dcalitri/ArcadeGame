@@ -25,11 +25,11 @@ public class SpawnManager : MonoBehaviour
     {
         int powerupIndex = Random.Range(0, powerupPrefabs.Length);
         
-        Instantiate(powerupPrefabs[powerupIndex], new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 5), powerupPrefabs[powerupIndex].transform.rotation);
+        Instantiate(powerupPrefabs[powerupIndex], new Vector3(Random.Range(-spawnRangeX, -1), 5), powerupPrefabs[powerupIndex].transform.rotation);
     }
 
     public void SpawnPowerUp2()
     {
-        Instantiate(powerupPrefabs[powerupIndex], new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 5), powerupPrefabs[powerupIndex].transform.rotation);
+        Instantiate(powerupPrefabs[powerupIndex], new Vector3(Random.Range(1, spawnRangeX), 5), powerupPrefabs[powerupIndex].transform.rotation);
     }
 }
