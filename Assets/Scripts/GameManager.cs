@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     private SpawnManager spawnManager;
     public bool isGameActive = false;
+    public GameObject howToPlayButton, backButton, quitButton;
 
     // Start is called before the first frame update
     void Start()
