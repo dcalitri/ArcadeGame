@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Return key was released.");
         }
+        if (Input.GetKeyDown(KeyCode.Alpha9) && !isGameActive)
+        {
+            RestartGame();
+        }
     }
 
     public void StartGame()
@@ -54,6 +58,8 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }
