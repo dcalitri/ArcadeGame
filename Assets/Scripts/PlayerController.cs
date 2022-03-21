@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     public float jumpForce;
     public float gravityModifier;
     public float powerupStrength = 2.0f;
@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
     private float yBound = -5;
     private float xRange = 9;
+    private float boostTimer;
+    private bool boosting;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,20 @@ public class PlayerController : MonoBehaviour
         player2Rb2d = GetComponent <Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+<<<<<<< Updated upstream
         
+=======
+
+>>>>>>> Stashed changes
         // How to Quit back to the Arcade Machine main menu
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             Application.Quit();
         }
+
+        speed = 5;
+        boostTimer = 0;
+        boosting = false;
     }
 
     // Update is called once per frame
@@ -75,6 +85,18 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
             gameManager.GameOver();
         }
+
+        if (boosting)
+        {
+            boostTimer += Time.deltaTime;
+
+            if (boostTimer >= 3)
+            {
+                speed = 5;
+                boostTimer = 0;
+                boosting = false;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision2D)
@@ -115,11 +137,18 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
         }
+
+        if (other.CompareTag("Powerup2"))
+        {
+            boosting = true;
+            speed = 12.0f;
+            Destroy(other.gameObject);
+        }
     }
 
     IEnumerator PowerupCountdownRoutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         hasPowerup = false;
     }
 }

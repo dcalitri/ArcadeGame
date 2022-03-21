@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3131751511911716009, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
       propertyPath: powerupStrength
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
@@ -324,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4490474515776698391, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
       propertyPath: powerupStrength
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d098fb6ff1c0a48927dc770fe17e3c, type: 3}
@@ -1286,6 +1286,7 @@ MonoBehaviour:
   - {fileID: 9180161520317561056, guid: f699c681a0a8d634e89ced3c374df968, type: 3}
   - {fileID: 7553827584900871445, guid: 05350d5af5f872c49ab66410240e0f4b, type: 3}
   powerupIndex: 0
+  powerupIndex2: 0
   spawnRangeX: 5
 --- !u!1 &1434254035
 GameObject:
