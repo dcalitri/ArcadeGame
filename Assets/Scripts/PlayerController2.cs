@@ -8,8 +8,8 @@ public class PlayerController2 : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce;
     public float gravityModifier;
-    public float powerupStrength = 2.0f;
-    public float powerupSpeedBoost = 10.0f;
+    public float powerupStrength = 5.0f;
+    public float powerupSpeedBoost = 12.0f;
     public bool isOnGround = true;
     public bool hasPowerup = false;
     public bool hasPowerup2 = false;
@@ -19,7 +19,6 @@ public class PlayerController2 : MonoBehaviour
     private float xRange = 9;
     private float boostTimer;
     private bool boosting;
-
 
     // Start is called before the first frame update
     void Start()
