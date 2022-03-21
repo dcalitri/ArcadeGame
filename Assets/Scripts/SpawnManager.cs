@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        int powerupIndex = Random.Range(0, powerupPrefabs.Length);
+        
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnPowerUp()
     {
+        int powerupIndex = Random.Range(0, powerupPrefabs.Length);
         Instantiate(powerupPrefabs[powerupIndex], new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 5), powerupPrefabs[powerupIndex].transform.rotation);
     }
 }
