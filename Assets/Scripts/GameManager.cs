@@ -10,14 +10,14 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public Button restartButton;
     public TextMeshProUGUI gameOverText;
+    private SpawnManager spawnManager;
     public bool isGameActive = false;
 
 
     // Start is called before the first frame update
     void Start()
-
     {
-     
+        spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         titleScreen.gameObject.SetActive(false);
         isGameActive = true;
+        spawnManager.SpawnPowerUp();
     }
 
 
