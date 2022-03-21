@@ -247,6 +247,7 @@ MonoBehaviour:
   restartButton: {fileID: 230670488}
   gameOverText: {fileID: 1473513004}
   isGameActive: 0
+  isGameOver: 0
   howToPlayButton: {fileID: 0}
   backButton: {fileID: 0}
   quitButton: {fileID: 0}
@@ -897,7 +898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: Restart (Enter)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
