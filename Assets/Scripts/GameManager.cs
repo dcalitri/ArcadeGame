@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     private SpawnManager spawnManager;
     public bool isGameActive = false;
-
 
     // Start is called before the first frame update
     void Start()
