@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collided with " + collision2D.gameObject.name + " with powerup set to " + hasPowerup);
         }
 
-        if (collision2D.gameObject.CompareTag("Player2") && hasPowerup)
+        if (collision2D.gameObject.CompareTag("Player2") && hasPowerup2)
         {
             Rigidbody2D player2RigidBody2D = collision2D.gameObject.GetComponent<Rigidbody2D>();
             Vector3 awayFromPlayer = (collision2D.gameObject.transform.position - transform.position);
