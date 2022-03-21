@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float powerupSpeedBoost = 10.0f;
     public bool isOnGround = true;
     public bool hasPowerup = false;
+    public bool hasPowerup2 = false;
     private Rigidbody2D player2Rb2d;
     private GameManager gameManager;
     private float yBound = -5;
@@ -109,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("Powerup2"))
         {
-            hasPowerup = true;
+            hasPowerup2 = true;
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
         }
