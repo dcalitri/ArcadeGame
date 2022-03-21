@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     private SpawnManager spawnManager;
     public bool isGameActive = false;
+    public bool isGameOver = false;
     public GameObject howToPlayButton, backButton, quitButton;
 
     // Start is called before the first frame update
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Return key was released.");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9) && !isGameActive)
+        if (Input.GetKeyDown(KeyCode.Return) && !isGameActive && isGameOver)
         {
             RestartGame();
         }
@@ -54,7 +55,8 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         isGameActive = false;
-    }
+        isGameOver = true;
+}
 
     public void RestartGame()
     {
