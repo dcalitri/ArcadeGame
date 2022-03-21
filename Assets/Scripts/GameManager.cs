@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         titleScreen.gameObject.SetActive(false);
         isGameActive = true;
         spawnManager.SpawnPowerUp();
+        spawnManager.SpawnPowerUp2();
     }
 
 
