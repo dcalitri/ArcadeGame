@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
