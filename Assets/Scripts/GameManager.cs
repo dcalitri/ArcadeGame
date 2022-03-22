@@ -26,18 +26,18 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Detect when the Return key is pressed down
-        if (Input.GetKeyDown(KeyCode.Return))
+        //Detect when the Space key is pressed down
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Return key was pressed.");
+            Debug.Log("Space key was pressed.");
         }
 
-        //Detect when the Return key has been released
-        if (Input.GetKeyUp(KeyCode.Return))
+        //Detect when the Space key has been released
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            Debug.Log("Return key was released.");
+            Debug.Log("Space key was released.");
         }
-        if (Input.GetKeyDown(KeyCode.Return) && !isGameActive && isGameOver)
+        if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && isGameOver)
         {
             RestartGame();
         }
