@@ -148,7 +148,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 7
   gravityModifier: 0
-  powerupStrength: 5
+  powerupStrength: 3
   powerupSpeedBoost: 12
   isOnGround: 1
   hasPowerup: 0
