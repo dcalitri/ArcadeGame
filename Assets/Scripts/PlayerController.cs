@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
             transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
-            if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+            if (Input.GetKeyDown(KeyCode.Z) && isOnGround)
             {
                 player2Rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isOnGround = false;
