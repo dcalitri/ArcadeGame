@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce;
     public float gravityModifier;
-    public float powerupStrength = 3.0f;
+    public float powerupStrength = 5.0f;
     public float powerupSpeedBoost = 12.0f;
     public bool isOnGround = true;
     public bool hasPowerup = false;
