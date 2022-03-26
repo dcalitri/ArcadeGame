@@ -636,6 +636,8 @@ GameObject:
   - component: {fileID: 464282218}
   - component: {fileID: 464282217}
   - component: {fileID: 464282216}
+  - component: {fileID: 464282219}
+  - component: {fileID: 464282220}
   m_Layer: 5
   m_Name: Quit Game Button
   m_TagString: Untagged
@@ -706,7 +708,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 464282217}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 813059913}
+        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464282217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,6 +759,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464282214}
   m_CullTransparentMesh: 1
+--- !u!114 &464282219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464282214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654656affae3cc34f829c990d59265e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &464282220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464282214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae5fb2ddf8c9c44d9848dca5c95329d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &772608398
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +917,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772608398}
   m_CullTransparentMesh: 1
+--- !u!1 &813059913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813059915}
+  - component: {fileID: 813059914}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &813059914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813059913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae5fb2ddf8c9c44d9848dca5c95329d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &813059915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813059913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 687.63837, y: 300.38184, z: -84.26001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &852357051
 GameObject:
   m_ObjectHideFlags: 0
