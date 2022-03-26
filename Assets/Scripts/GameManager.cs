@@ -11,39 +11,16 @@ public class GameManager : MonoBehaviour
     public GameObject titleScreen;
     public GameObject howToPlayMenu;
     public Button restartButton;
-    public Button backButton;
     public TextMeshProUGUI gameOverText;
     private SpawnManager spawnManager;
     public bool isGameActive = false;
     public bool isGameOver = false;
-    public Button howToPlayButton;
-    public Button quitButton;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
         Cursor.visible = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Detect when the Space key is pressed down
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Space key was pressed.");
-        }
-
-        //Detect when the Space key has been released
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Debug.Log("Space key was released.");
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && !isGameActive && isGameOver)
-        {
-            RestartGame();
-        }
     }
 
     public void StartGame()
@@ -53,19 +30,14 @@ public class GameManager : MonoBehaviour
         spawnManager.SpawnPowerUp();
         spawnManager.SpawnPowerUp2();
     }
-    
-    public void HowToPlayButtonPressed()
-    {
-        howToPlayMenu.SetActive(true);
-        backButton.Select();
-        titleScreen.SetActive(false);
-    }
+
 
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         isGameActive = false;
+        restartButton.Select();
         isGameOver = true;
 }
 

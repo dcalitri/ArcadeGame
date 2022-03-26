@@ -7,24 +7,19 @@ using UnityEngine.EventSystems;
 public class ButtonManager : MonoBehaviour
 {
     public GameObject titleScreen;
-    public GameObject howToPlayMenu;
+    public GameObject controlPanel;
     public GameObject gameOverScreen;
     public Button howToPlayButton;
     public Button startButton;
     public Button backButton;
     public Button restartButton;
-    private GameManager gameManager;
-
-    void Start()
-    {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-    }
+    
 
 
     // Start is called before the first frame update
     public void HowToPlayButtonPressed()
     {
-        howToPlayMenu.SetActive(true);
+        controlPanel.SetActive(true);
         backButton.Select();
         titleScreen.SetActive(false);
     }
@@ -33,7 +28,7 @@ public class ButtonManager : MonoBehaviour
     {
         titleScreen.SetActive(true);
         startButton.Select();
-        howToPlayMenu.SetActive(false);
+        controlPanel.SetActive(false);
     }
 
     public void QuitButtonPressed()
