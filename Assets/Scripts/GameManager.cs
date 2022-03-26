@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
+
+        //Hides the Mouse Cursor on Hitting Start Button
         Cursor.visible = false;
     }
 
