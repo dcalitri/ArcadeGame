@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1434027375690542592, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434027375690542592, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434027375690542592, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434027375690542593, guid: 446f4f6c47cb5aa499d1e60a15169762, type: 3}
       propertyPath: m_Name
       value: Player 2
