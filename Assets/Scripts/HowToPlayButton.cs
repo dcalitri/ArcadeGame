@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartButton : MonoBehaviour
+public class HowToPlayButton : MonoBehaviour
 {
     private Button button;
     private GameManager gameManager;
@@ -12,18 +12,12 @@ public class StartButton : MonoBehaviour
     void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(GameStart);
+        button.onClick.AddListener(Controls);
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
-    void GameStart()
+    public void Controls()
     {
-        gameManager.StartGame();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gameManager.HowToPlayButtonPressed();
     }
 }

@@ -1,0 +1,9 @@
+Title: Sumo Crashers
+
+Creators:
+- UI and Assets; Justin Boremi
+- Programming; Domenic Calitri
+
+Platforms: PC
+
+About: You and your friend are boxes and the goal is to knock the other person off of the screen.

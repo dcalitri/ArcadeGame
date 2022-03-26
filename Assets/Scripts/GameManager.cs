@@ -9,12 +9,15 @@ using UnityEngine.EventSystems;
 public class GameManager : MonoBehaviour
 {
     public GameObject titleScreen;
+    public GameObject howToPlayMenu;
     public Button restartButton;
+    public Button backButton;
     public TextMeshProUGUI gameOverText;
     private SpawnManager spawnManager;
     public bool isGameActive = false;
     public bool isGameOver = false;
-    public GameObject howToPlayButton, backButton, quitButton;
+    public Button howToPlayButton;
+    public Button quitButton;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +52,13 @@ public class GameManager : MonoBehaviour
         isGameActive = true;
         spawnManager.SpawnPowerUp();
         spawnManager.SpawnPowerUp2();
+    }
+    
+    public void HowToPlayButtonPressed()
+    {
+        howToPlayMenu.SetActive(true);
+        backButton.Select();
+        titleScreen.SetActive(false);
     }
 
     public void GameOver()
