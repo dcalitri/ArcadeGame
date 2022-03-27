@@ -1,6 +1,7 @@
-# ArcadeGame
-# Title: Sumo Crashers
-About: You and your friend are boxes in a wrestling competition. the goal is to knock each other off of the platform. 
-# Credits: 
-Asset Designer: Justin Boremi
-Programmer: Domenic Calitri
+Sumo Crashers
+Sumo Crashers is a 2 player 2d fighting game. Your goal is to gain powerups and knock eachother off of a floating platform. Last man standing wins.
+Move- WASD (Player 1) and Arrow Keys (Player 2)
+Jump- Z (Player 1) and 4 (Player 2)
+Quit Game- Escape
+We created a speed boost powerup
+Free 2D Adventure Beach Background
