@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
         spawnManager.SpawnPowerUp2();
     }
 
-
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);

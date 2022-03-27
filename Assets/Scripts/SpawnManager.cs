@@ -9,7 +9,6 @@ public class SpawnManager : MonoBehaviour
     public int powerupIndex2;
     public float spawnRangeX = 5.0f;
 
-
     // Start is called before the first frame update
     public void Start()
     {
