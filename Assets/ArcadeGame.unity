@@ -648,8 +648,6 @@ GameObject:
   - component: {fileID: 464282218}
   - component: {fileID: 464282217}
   - component: {fileID: 464282216}
-  - component: {fileID: 464282219}
-  - component: {fileID: 464282220}
   m_Layer: 5
   m_Name: Quit Game Button
   m_TagString: Untagged
@@ -721,9 +719,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 813059913}
-        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 813059914}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -771,30 +769,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464282214}
   m_CullTransparentMesh: 1
---- !u!114 &464282219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464282214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 654656affae3cc34f829c990d59265e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &464282220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464282214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae5fb2ddf8c9c44d9848dca5c95329d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &772608398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Controls:\n- Move\nWASD Keys (Player 1)\nArrow Keys (Player 2)\n- Jump
-    \nZ (Payer 1)\n4 (Player 2)\n- Quit\nEsc"
+    \nZ (Player 1)\n4 (Player 2)\n- Quit\nEsc"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
