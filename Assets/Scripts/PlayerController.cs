@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player2Rb2d = GetComponent <Rigidbody2D>();
+        player2Rb2d = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collided with " + collision2D.gameObject.name + " with powerup set to " + hasPowerup);
         }
 
-        if (collision2D.gameObject.CompareTag("Player2") && hasPowerup2)
+        if (collision2D.gameObject.CompareTag("Player2") && hasPowerup)
         {
             Rigidbody2D player2RigidBody2D = collision2D.gameObject.GetComponent<Rigidbody2D>();
             Vector3 awayFromPlayer = (collision2D.gameObject.transform.position - transform.position);
