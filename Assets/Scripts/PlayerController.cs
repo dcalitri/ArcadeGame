@@ -87,7 +87,14 @@ public class PlayerController : MonoBehaviour
                 boosting = false;
             }
         }
+
+        // How to Quit back to the Arcade Machine main menu
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
