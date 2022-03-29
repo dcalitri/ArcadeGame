@@ -27,12 +27,6 @@ public class PlayerController : MonoBehaviour
         Physics.gravity *= gravityModifier;
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
-        // How to Quit back to the Arcade Machine main menu
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-
         speed = 5;
         boostTimer = 0;
         boosting = false;

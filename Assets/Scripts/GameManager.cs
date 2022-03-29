@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
 
         //Hides the Mouse Cursor on Hitting Start Button
         Cursor.visible = false;
+
+        // How to Quit back to the Arcade Machine main menu
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void StartGame()
